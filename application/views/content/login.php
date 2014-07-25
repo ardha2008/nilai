@@ -25,18 +25,18 @@ $c=$a+$b;
       <div class="form-group">
         <label class="col-sm-2 control-label">Password</label>
         <div class="col-sm-10">
-          <input type="password" class="form-control" />
+          <input type="password" class="form-control" name="password" />
         </div>
       </div>
       
       <div class="form-group">
-        <label class="col-sm-2 control-label"><?= $a.'+'.$b.'=' ?></label>
-        <div class="col-sm-3">
-          <input type="text" class="form-control" />
+        <label class="col-sm-2 control-label"><?= $a.'+'.$b.' =' ?></label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" name="capt" />
         </div>
       </div>
       
-      <input type="hidden" value="<?= $c ?>" />
+      <input type="hidden" name="capt2" value="<?= $c ?>" />
       
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
