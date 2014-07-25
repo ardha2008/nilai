@@ -38,15 +38,19 @@
 |
 */
 $route['login'] = 'home/login';
+$route['logout'] = 'home/logout';
+
 $route['auth']  = 'home/auth';
 
 $route['siswa'] = 'dashboard/siswa';
 $route['guru'] = 'dashboard/guru';
+$route['mapel'] = 'dashboard/mapel';
 
 $route['proses'] = 'dashboard/proses';
+$route['delete/(:any)/(:num)'] = "dashboard/delete/$1/$2";
 
 $route['default_controller'] = "Home";
-$route['404_override'] = '';
+$route['404_override'] = 'home/error';
 
 
 /* End of file routes.php */

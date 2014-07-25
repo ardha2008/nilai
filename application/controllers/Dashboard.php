@@ -31,6 +31,15 @@ class Dashboard extends CI_Controller{
         $this->load->view('home',$data);
     }
     
+    function mapel(){
+        $data['title']  = 'Mata Pelajaran';
+        $data['pages']  = 'mapel';
+        
+        $data['seluruh']    = $this->db->get('mapel');
+        
+        $this->load->view('home',$data);
+    }
+    
     function proses(){
         
         if(isset($_POST['siswa'])){
@@ -42,6 +51,17 @@ class Dashboard extends CI_Controller{
             $input=$this->db->insert('siswa',$data);
             if($input){
                 redirect('siswa');
+            }
+        }
+        
+        if(isset($_POST['mapel'])){
+            $data=array(
+            'nama'=>$this->input->post('nama')
+            );
+            
+            $query=$this->db->insert('mapel',$data);
+            if($query){
+                redirect('mapel');
             }
         }
         
@@ -64,5 +84,18 @@ class Dashboard extends CI_Controller{
                 redirect('guru');
             }
         }
+    }
+    
+    function delete($tabel=null,$id=null){
+        if($tabel==null or $id==null) redirect('','','404');
+        
+        if($tabel=='guru') $kolom='id_guru';
+        if($tabel=='siswa') $kolom='id_siswa';
+        if($tabel=='mapel') $kolom='id_mapel';
+                
+        $this->db->where($kolom,$id);
+        $this->db->delete($tabel);
+        
+        redirect($tabel);
     }
 }

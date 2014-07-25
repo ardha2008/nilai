@@ -1,7 +1,8 @@
 <?php 
 $menu=array(
-1=>'Dashboard','Siswa','Guru','Nilai','Logout'
-); 
+1=>'Dashboard','Siswa','Guru','Mapel','Nilai','Logout'
+);
+ 
 ?>
 <div class="clearfix"></div>
 <div class="col-lg-4 column">
@@ -13,7 +14,7 @@ $menu=array(
         <div class="panel-body">
             <ul>
                 <?php for($i=1;$i<=count($menu);$i++){?>
-                    <li><a href="#"><?= $menu[$i]; ?></a></li>
+                    <li><a href="<?= site_url(strtolower($menu[$i])) ?>"><?= $menu[$i]; ?></a></li>
                 <?php } ?>
             </ul>
         </div>

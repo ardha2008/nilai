@@ -55,4 +55,13 @@ class Home extends CI_Controller{
 		}
     }
     
+    function error(){
+        echo 'not found';
+    }
+    
+    function logout(){
+        $this->session->sess_destroy();
+        redirect('login');
+    }
+    
 }

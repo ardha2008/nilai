@@ -1,7 +1,7 @@
 <div class="col-md-6">
     <div class="panel panel-default">
         <div class="panel-heading">
-            Siswa
+            Mata Pelajaran
         </div>
         
         <div class="panel-body">
@@ -10,29 +10,15 @@
         <?= form_open('proses',array('class'=>'form-horizontal')) ?>
           
           <div class="form-group">
-            <label class="col-sm-2 control-label"></label>
-            <div class="col-sm-10">
-              <?php echo validation_errors(); ?>
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <label class="col-sm-2 control-label">Nama</label>
+            <label class="col-sm-2 control-label">Mata Pelajaran</label>
             <div class="col-sm-10">
               <input type="text" class="form-control" name="nama" />
             </div>
           </div>
           
           <div class="form-group">
-            <label class="col-sm-2 control-label">Alamat</label>
-            <div class="col-sm-10">
-              <textarea class="form-control" name="alamat"></textarea>
-            </div>
-          </div>
-          
-          <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-              <button type="submit" name="siswa" class="btn btn-default"><i class="glyphicon glyphicon-ok"></i> Submit</button>
+              <button type="submit" name="mapel" class="btn btn-default"><i class="glyphicon glyphicon-ok"></i> Submit</button>
             </div>
           </div>
         
@@ -48,7 +34,6 @@
             <tr>
                 <td class="danger">#</td>
                 <td class="danger">Nama</td>
-                <td class="danger">Alamat</td>
                 <td class="danger"></td>
             </tr>
         </thead>
@@ -58,14 +43,11 @@
                 <tr>
                     <td><?= $i ?></td>
                     <td><?= $row->nama ?></td>
-                    <td><?= $row->alamat ?></td>
                     <td>
-                        <a href="<?= site_url('delete/siswa/'.$row->id_siswa) ?>"><i class="glyphicon glyphicon-remove"></i></a>
+                        <a href="<?= site_url('delete/mapel/'.$row->id_mapel) ?>"><i class="glyphicon glyphicon-remove"></i></a>
                     </td>
                 </tr>
             <?php $i++; } ?>
         </tbody>
     </table>
 </div>
-
-<div class="clearfix"></div>

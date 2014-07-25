@@ -56,6 +56,7 @@
                 <td class="danger">#</td>
                 <td class="danger">Nama</td>
                 <td class="danger">Alamat</td>
+                <td class="danger"></td>
             </tr>
         </thead>
         
@@ -65,8 +66,11 @@
                     <td><?= $i ?></td>
                     <td><?= $row->nama ?></td>
                     <td><?= $row->alamat ?></td>
+                    <td>
+                        <a href="<?= site_url('delete/guru/'.$row->id_guru) ?>"><i class="glyphicon glyphicon-remove"></i></a>
+                    </td>
                 </tr>
-            <?php } ?>
+            <?php $i++; } ?>
         </tbody>
     </table>
 </div>
