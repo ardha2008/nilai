@@ -38,13 +38,13 @@
 |
 */
 $route['login'] = 'home/login';
-$route['logout'] = 'home/logout';
-
+$route['logout']= 'home/logout';
 $route['auth']  = 'home/auth';
 
 $route['siswa'] = 'dashboard/siswa';
-$route['guru'] = 'dashboard/guru';
+$route['guru']  = 'dashboard/guru';
 $route['mapel'] = 'dashboard/mapel';
+$route['kelas'] = 'dashboard/kelas';
 
 $route['proses'] = 'dashboard/proses';
 $route['delete/(:any)/(:num)'] = "dashboard/delete/$1/$2";

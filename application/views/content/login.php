@@ -25,14 +25,14 @@ $c=$a+$b;
       <div class="form-group">
         <label class="col-sm-2 control-label">ID Guru</label>
         <div class="col-sm-10">
-          <input type="text" name="id" class="form-control" placeholder=""/>
+          <input type="text" name="id" value="00001" class="form-control" placeholder=""/>
         </div>
       </div>
       
       <div class="form-group">
         <label class="col-sm-2 control-label">Password</label>
         <div class="col-sm-10">
-          <input type="password" class="form-control" name="password" />
+          <input type="password" class="form-control" value="ardhaherdianto" name="password" />
         </div>
       </div>
       

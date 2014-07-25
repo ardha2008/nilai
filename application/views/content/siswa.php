@@ -19,14 +19,14 @@
           <div class="form-group">
             <label class="col-sm-2 control-label">Nama</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" name="nama" />
+              <input type="text" autofocus="" class="form-control" name="nama" />
             </div>
           </div>
           
           <div class="form-group">
             <label class="col-sm-2 control-label">Alamat</label>
             <div class="col-sm-10">
-              <textarea class="form-control" name="alamat"></textarea>
+              <input type="text" class="form-control" name="alamat" />
             </div>
           </div>
           

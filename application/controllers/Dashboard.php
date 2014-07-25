@@ -31,6 +31,15 @@ class Dashboard extends CI_Controller{
         $this->load->view('home',$data);
     }
     
+    function kelas(){
+        $data['title']  = 'Kelas';
+        $data['pages']  = 'kelas';
+        
+        $data['seluruh']    = $this->db->get('kelas');
+        
+        $this->load->view('home',$data);
+    }
+    
     function mapel(){
         $data['title']  = 'Mata Pelajaran';
         $data['pages']  = 'mapel';
@@ -51,6 +60,17 @@ class Dashboard extends CI_Controller{
             $input=$this->db->insert('siswa',$data);
             if($input){
                 redirect('siswa');
+            }
+        }
+        
+        if(isset($_POST['kelas'])){
+            $data=array(
+            'nama'=>$this->input->post('nama')
+            );
+            
+            $query=$this->db->insert('kelas',$data);
+            if($query){
+                redirect('kelas');
             }
         }
         

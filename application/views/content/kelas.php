@@ -1,7 +1,7 @@
 <div class="col-md-6">
     <div class="panel panel-default">
         <div class="panel-heading">
-            Mata Pelajaran
+            Kelas
         </div>
         
         <div class="panel-body">
@@ -10,7 +10,7 @@
         <?= form_open('proses',array('class'=>'form-horizontal')) ?>
           
           <div class="form-group">
-            <label class="col-sm-2 control-label">Mata Pelajaran</label>
+            <label class="col-sm-2 control-label">Kelas </label>
             <div class="col-sm-10">
               <input type="text" class="form-control" autofocus="" name="nama" />
             </div>
@@ -18,7 +18,7 @@
           
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-              <button type="submit" name="mapel" class="btn btn-default"><i class="glyphicon glyphicon-ok"></i> Submit</button>
+              <button type="submit" name="kelas" class="btn btn-default"><i class="glyphicon glyphicon-ok"></i> Submit</button>
             </div>
           </div>
         
@@ -33,7 +33,7 @@
         <thead>
             <tr>
                 <td class="danger">#</td>
-                <td class="danger">Nama</td>
+                <td class="danger">Kelas</td>
                 <td class="danger"></td>
             </tr>
         </thead>
@@ -44,7 +44,7 @@
                     <td><?= $i ?></td>
                     <td><?= $row->nama ?></td>
                     <td>
-                        <a href="<?= site_url('delete/mapel/'.$row->id_mapel) ?>"><i class="glyphicon glyphicon-remove"></i></a>
+                        <a href="<?= site_url('delete/kelas/'.$row->id_kelas) ?>"><i class="glyphicon glyphicon-remove"></i></a>
                     </td>
                 </tr>
             <?php $i++; } ?>

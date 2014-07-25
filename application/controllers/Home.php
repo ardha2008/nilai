@@ -5,6 +5,8 @@ class Home extends CI_Controller{
     
     function __construct(){
         parent::__construct();
+        
+       // if($this->session->userdata('login')==true) redirect('dashboard');
     }
     
     function index(){
@@ -62,6 +64,14 @@ class Home extends CI_Controller{
     function logout(){
         $this->session->sess_destroy();
         redirect('login');
+    }
+    
+    function tes(){
+        $string = 'Loren Insum Dolor sit amet';
+        $output=explode(' ',$string);
+        foreach($output as $string){
+            echo substr($string,0,1);
+        }
     }
     
 }

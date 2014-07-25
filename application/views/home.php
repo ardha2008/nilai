@@ -8,6 +8,7 @@ if($pages=='dashboard') $this->load->view('content/dashboard');
 if($pages=='siswa') $this->load->view('content/siswa');
 if($pages=='guru') $this->load->view('content/guru');
 if($pages=='mapel') $this->load->view('content/mapel');
+if($pages=='kelas') $this->load->view('content/kelas');
 
 $this->load->view('footer'); 
  
