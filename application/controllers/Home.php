@@ -41,8 +41,16 @@ class Home extends CI_Controller{
 		}else{
             $this->db->where('id_guru',$id);
             $this->db->where('password',$password);
-            $query=$this->db->get('users');            
+            $query=$this->db->get('users');
+            
+            $get_data=$this->db->get_where('users',array('id_guru'=>$id));            
+            
             if($query->num_rows() != 1 )exit('Password salah');
+            
+            foreach($get_data->result() as $row){
+                $this->session->set_userdata('id',$row->id_guru);
+            }
+            $this->session->set_userdata('login',true);
             redirect('dashboard');
 		}
     }

@@ -39,6 +39,10 @@
 */
 $route['login'] = 'home/login';
 $route['auth']  = 'home/auth';
+$route['siswa'] = 'dashboard/siswa';
+
+$route['proses'] = 'dashboard/proses';
+
 $route['default_controller'] = "Home";
 $route['404_override'] = '';
 
