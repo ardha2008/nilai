@@ -20,4 +20,31 @@ class Home extends CI_Controller{
         $this->load->view('home',$data);
     }
     
+    function auth(){
+        $this->load->library('form_validation');
+        
+        $data['title']  = 'Login';
+        $data['pages']  = 'login';
+        
+        $this->form_validation->set_rules('id', 'ID ', 'required');
+		$this->form_validation->set_rules('password', 'Password', 'required');
+		$this->form_validation->set_rules('capt', 'Captha', 'required|matches[capt2]');
+        
+        $this->form_validation->set_message('matches', 'Invalid captcha');
+		
+        $id=$this->input->post('id');
+        $password=$this->input->post('password');
+        
+        
+        if ($this->form_validation->run() == FALSE){
+			$this->load->view('home',$data);
+		}else{
+            $this->db->where('id_guru',$id);
+            $this->db->where('password',$password);
+            $query=$this->db->get('users');            
+            if($query->num_rows() != 1 )exit('Password salah');
+            redirect('dashboard');
+		}
+    }
+    
 }

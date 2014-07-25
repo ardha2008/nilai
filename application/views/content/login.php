@@ -13,8 +13,15 @@ $c=$a+$b;
     <div class="panel-body">
         
 
-    <?= form_open('home/auth',array('class'=>'form-horizontal')) ?>
-        
+    <?= form_open('auth',array('class'=>'form-horizontal')) ?>
+      
+      <div class="form-group">
+        <label class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+          <?php echo validation_errors(); ?>
+        </div>
+      </div>
+      
       <div class="form-group">
         <label class="col-sm-2 control-label">ID Guru</label>
         <div class="col-sm-10">
