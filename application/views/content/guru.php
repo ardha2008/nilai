@@ -1,7 +1,7 @@
 <div class="col-md-6">
     <div class="panel panel-default">
         <div class="panel-heading">
-            Siswa
+            Guru
         </div>
         
         <div class="panel-body">
@@ -9,10 +9,10 @@
     
         <?= form_open('proses',array('class'=>'form-horizontal')) ?>
           
-          <div class="form-group">
-            <label class="col-sm-2 control-label"></label>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">NIG</label>
             <div class="col-sm-10">
-              <?php echo validation_errors(); ?>
+              <input type="text" class="form-control" name="id" />
             </div>
           </div>
           
@@ -31,8 +31,15 @@
           </div>
           
           <div class="form-group">
+            <label class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" name="password" />
+            </div>
+          </div>
+          
+          <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-              <button type="submit" name="siswa" class="btn btn-default"><i class="glyphicon glyphicon-ok"></i> Submit</button>
+              <button type="submit" name="guru" class="btn btn-default"><i class="glyphicon glyphicon-ok"></i> Submit</button>
             </div>
           </div>
         
@@ -63,5 +70,3 @@
         </tbody>
     </table>
 </div>
-
-<div class="clearfix"></div>

@@ -39,7 +39,9 @@
 */
 $route['login'] = 'home/login';
 $route['auth']  = 'home/auth';
+
 $route['siswa'] = 'dashboard/siswa';
+$route['guru'] = 'dashboard/guru';
 
 $route['proses'] = 'dashboard/proses';
 
