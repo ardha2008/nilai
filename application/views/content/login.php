@@ -18,6 +18,9 @@ $c=$a+$b;
       <div class="form-group">
         <label class="col-sm-2 control-label"></label>
         <div class="col-sm-10">
+            <?php if($this->session->userdata('message')=='login_failed'){?>
+                <p style="color:#FF0101;">Login failed</p>
+            <?php } ?>
           <?php echo validation_errors(); ?>
         </div>
       </div>
