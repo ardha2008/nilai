@@ -60,6 +60,7 @@
                     <td><?= $row->nama ?></td>
                     <td><?= $row->alamat ?></td>
                     <td>
+                        <a href="<?= site_url('manage/siswa/edit/'.$row->id_siswa) ?>"><i class="glyphicon glyphicon-pencil"></i></a>
                         <a href="<?= site_url('delete/siswa/'.$row->id_siswa) ?>"><i class="glyphicon glyphicon-remove"></i></a>
                     </td>
                 </tr>

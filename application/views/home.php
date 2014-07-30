@@ -10,6 +10,8 @@ if($pages=='guru') $this->load->view('content/guru');
 if($pages=='mapel') $this->load->view('content/mapel');
 if($pages=='kelas') $this->load->view('content/kelas');
 
+if($pages=='manage/siswa/edit') $this->load->view('content/manage/siswa');
+
 $this->load->view('footer'); 
  
  ?>

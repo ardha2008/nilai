@@ -63,6 +63,19 @@ class Dashboard extends CI_Controller{
             }
         }
         
+        if(isset($_POST['update_siswa'])){
+            $data=array(
+            'nama' => $this->input->post('nama'),
+            'alamat' => $this->input->post('alamat'),
+            );
+            
+            $id=$this->input->post('id');
+            $this->db->where('id_siswa',$id);
+            $query=$this->db->update('siswa',$data);
+            $this->session->set_userdata('message','update');
+            if($query)redirect('manage/siswa/edit/'.$id);
+        }
+        
         if(isset($_POST['kelas'])){
             $data=array(
             'nama'=>$this->input->post('nama')
@@ -104,6 +117,7 @@ class Dashboard extends CI_Controller{
                 redirect('guru');
             }
         }
+        
     }
     
     function delete($tabel=null,$id=null){
