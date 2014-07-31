@@ -12,14 +12,14 @@ class Manage extends CI_Controller{
         
         
             $query=$this->db->get_where('siswa',array('siswa.id_siswa'=>$id));
-            $kelas=$this->db->get('kelas');
+            $query_kelas=$this->db->get('kelas');
             
             $data['title']  = "Edit $id";
             $data['pages']  = 'manage/siswa/edit';
             $data['seluruh'] = $query->result();
             $data['id'] = $id;
             
-            $data['kelas'] = $kelas->result();
+            $data['kelas'] = $query_kelas->result();
           // print_r($query->result());
             $this->load->view('home',$data);
         
