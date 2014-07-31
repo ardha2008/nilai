@@ -67,6 +67,7 @@ class Dashboard extends CI_Controller{
             $data=array(
             'nama' => $this->input->post('nama'),
             'alamat' => $this->input->post('alamat'),
+            'id_kelas' => $this->input->post('kelas'),
             );
             
             $id=$this->input->post('id');
@@ -116,6 +117,19 @@ class Dashboard extends CI_Controller{
             if($input){
                 redirect('guru');
             }
+        }
+        
+        if(isset($_POST['update_guru'])){
+            $data=array(
+            'nama' => $this->input->post('nama'),
+            'alamat' => $this->input->post('alamat'),
+            );
+            
+            $id=$this->input->post('id');
+            $this->db->where('id_guru',$id);
+            $query=$this->db->update('guru',$data);
+            $this->session->set_userdata('message','update');
+            if($query)redirect('manage/guru/edit/'.$id);
         }
         
     }

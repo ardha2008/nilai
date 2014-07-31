@@ -31,6 +31,17 @@
           </div>
           
           <div class="form-group">
+            <label class="col-sm-2 control-label">Kelas</label>
+            <div class="col-sm-10">
+                <select name="kelas" class="form-control">
+                    <?php foreach($kelas as $row){?>
+                        <option value="<?php echo $row->id_kelas ?>"><?php echo $row->nama ?></option>
+                    <?php } ?>
+                </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
             <label class="col-sm-2 control-label">Alamat</label>
             <div class="col-sm-10">
               <input type="text" class="form-control" value="<?= $seluruh[0]->alamat ?>" name="alamat" />
@@ -49,7 +60,6 @@
         </div>
     
     </div>
-    
     
 </div>
 

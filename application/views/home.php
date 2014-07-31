@@ -11,6 +11,7 @@ if($pages=='mapel') $this->load->view('content/mapel');
 if($pages=='kelas') $this->load->view('content/kelas');
 
 if($pages=='manage/siswa/edit') $this->load->view('content/manage/siswa');
+if($pages=='manage/guru/edit') $this->load->view('content/manage/guru');
 
 $this->load->view('footer'); 
  

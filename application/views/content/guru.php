@@ -67,6 +67,7 @@
                     <td><?= $row->nama ?></td>
                     <td><?= $row->alamat ?></td>
                     <td>
+                        <a href="<?= site_url('manage/guru/edit/'.$row->id_guru) ?>"><i class="glyphicon glyphicon-pencil"></i></a>
                         <a href="<?= site_url('delete/guru/'.$row->id_guru) ?>"><i class="glyphicon glyphicon-remove"></i></a>
                     </td>
                 </tr>
