@@ -42,7 +42,7 @@
             <?php $i=1;foreach($seluruh->result() as $row){?>
                 <tr>
                     <td><?= $i ?></td>
-                    <td><?= $row->nama ?></td>
+                    <td><a href="<?= site_url('lihat/kelas/'.$row->id_kelas) ?>"><?= $row->nama ?></a></td>
                     <td>
                         <a href="<?= site_url('delete/kelas/'.$row->id_kelas) ?>"><i class="glyphicon glyphicon-remove"></i></a>
                     </td>

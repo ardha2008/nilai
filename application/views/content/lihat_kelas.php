@@ -5,7 +5,8 @@
         </div>
         
         <div class="panel-body">
-            
+            <a href="<?= site_url('kelas'); ?>" class="btn btn-primary">Daftar Kelas</a>
+            <hr />
             <table class="table table-striped table-hovered">
                 <thead>
                     <tr>
@@ -21,7 +22,7 @@
                             <td><?= $i ?></td>
                             <td><?= $row->nama ?></td>
                             <td>
-                                <a href="<?= site_url('delete/kelas/'.$row->id_kelas) ?>"><i class="glyphicon glyphicon-remove"></i></a>
+                                
                             </td>
                         </tr>
                     <?php $i++; } ?>

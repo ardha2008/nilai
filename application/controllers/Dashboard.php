@@ -135,7 +135,7 @@ class Dashboard extends CI_Controller{
     }
     
     function lihat($kelas){
-        $query=$this->db->get_where('siswa',array('id_kelas'=>$kelas));
+        $query=$this->db->where('siswa.id_kelas',$kelas)->get('siswa');
         
         $data['title']  = "Data Kelas $kelas";
         $data['pages'] = 'lihat/kelas';
