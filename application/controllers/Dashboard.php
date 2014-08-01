@@ -134,6 +134,16 @@ class Dashboard extends CI_Controller{
         
     }
     
+    function lihat($kelas){
+        $query=$this->db->get_where('siswa',array('id_kelas'=>$kelas));
+        
+        $data['title']  = "Data Kelas $kelas";
+        $data['pages'] = 'lihat/kelas';
+        $data['seluruh'] = $query->result();
+        
+        $this->load->view('home',$data);
+    }
+    
     function delete($tabel=null,$id=null){
         if($tabel==null or $id==null) redirect('','','404');
         

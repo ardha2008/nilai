@@ -61,3 +61,12 @@ $c=$a+$b;
 
 </div>
 </div>
+
+<div id="popupMenu">
+<span>Ini adalah help</span>
+</div>
+
+<script>
+$('#help').contextMenu('#popupMenu');
+</script>
+

@@ -46,7 +46,10 @@ $route['guru']  = 'dashboard/guru';
 $route['mapel'] = 'dashboard/mapel';
 $route['kelas'] = 'dashboard/kelas';
 
+$route['lihat/kelas/(:num)'] = "dashboard/lihat/$1";
+
 $route['proses'] = 'dashboard/proses';
+
 $route['delete/(:any)/(:num)'] = "dashboard/delete/$1/$2";
 
 $route['default_controller'] = "Home";

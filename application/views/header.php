@@ -30,7 +30,7 @@
 	<script type="text/javascript" src="<?= base_url(); ?>theme/js/jquery.min.js"></script>
 	<script type="text/javascript" src="<?= base_url() ?>theme/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?= base_url(); ?>theme/js/scripts.js"></script>
-    
+    <script type="text/javascript" src="<?= base_url(); ?>theme/js/contextMenu.min.js"></script>
 </head>
 
 <body>

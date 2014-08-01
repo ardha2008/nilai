@@ -9,6 +9,7 @@ if($pages=='siswa') $this->load->view('content/siswa');
 if($pages=='guru') $this->load->view('content/guru');
 if($pages=='mapel') $this->load->view('content/mapel');
 if($pages=='kelas') $this->load->view('content/kelas');
+if($pages=='lihat/kelas') $this->load->view('content/lihat_kelas');
 
 if($pages=='manage/siswa/edit') $this->load->view('content/manage/siswa');
 if($pages=='manage/guru/edit') $this->load->view('content/manage/guru');
